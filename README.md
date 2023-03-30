@@ -41,3 +41,4 @@ FIRST_SUPERUSER_PASSWORD=****
 FIRST_SUPERUSER_EMAIL=*****@gmail.com
 ```
 
+Автор: Владислав Сизов
