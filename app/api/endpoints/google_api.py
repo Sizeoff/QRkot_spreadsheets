@@ -21,8 +21,8 @@ router = APIRouter()
     dependencies=[Depends(current_superuser)],
 )
 async def get_report(
-    session: AsyncSession = Depends(get_async_session),
-    wrapper_services: Aiogoogle = Depends(get_service)
+        session: AsyncSession = Depends(get_async_session),
+        wrapper_services: Aiogoogle = Depends(get_service)
 
 ):
     projects = await charity_project_crud.get_projects_by_completion_rate(session)
@@ -31,5 +31,5 @@ async def get_report(
     await spreadsheets_update_value(spreadsheet_id,
                                     projects,
                                     wrapper_services)
-    print(spreadsheet_id)
+
     return projects
